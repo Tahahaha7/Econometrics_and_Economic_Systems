@@ -1,0 +1,39 @@
+/* Homework I: SS154 Econometrics*/ 
+
+/* Fig 1 */
+hist a_age, by(a_sex)
+
+/* Fig 2 */
+gen ptotval_m = ptotval if a_sex == 1
+gen ptotval_f = ptotval if a_sex == 2
+egen m_col_m = mean(ptotval_m), by(age)
+egen m_col_f = mean(ptotval_f), by(age)
+twoway scatter m_col_m a_age || scatter m_col_m a_age
+
+/* Fig 3 */
+gen age = a_age if a_age < 40 & a_age > 15
+gen ptot_m = ptotval if a_sex == 1 & a_hga == 43
+gen ptot_f = ptotval if a_sex == 2 & a_hga == 43
+egen col_m = mean(ptot_m), by(age)
+egen col_f = mean(ptot_f), by(age)
+twoway (scatter col_m age || lfit col_m age) (scatter col_f age || lfit col_f age)
+
+/* Table 1 */
+reg ptotval_m age
+
+/* Table 2 */
+reg ptotval_f age
+
+/* Fig 5 */
+gen diff = ptotval_m - ptotval_f
+hist diff, freq normal
+
+/* Table 3 */
+ttest diff == 0, level(99)
+
+/* Fig 6 */
+reg ptotval_m age, saving(male)
+rvpplot age /* for male mean income */
+reg ptotval_f age, saving(female)
+rvpplot age /* for male mean income */
+gr combine male.gph female.gph
