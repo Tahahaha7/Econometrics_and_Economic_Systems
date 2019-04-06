@@ -4,5 +4,5 @@
 
 - Assignment I: Current Population Survey March 2017
 - Assignment II: U.S. gasoline consumption
-- Assignment III: The German healthcare dataset
+- Assignment III: The German healthcare dataset & The Redbook survey
 - Final Project:  
