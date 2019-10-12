@@ -5,4 +5,4 @@
 - Assignment I: Current Population Survey March 2017
 - Assignment II: U.S. gasoline consumption
 - Assignment III: The German healthcare dataset & The Redbook survey
-- Final Project:  
+- Final Project: The impact of the Carbon Tax on economic performance [Case of British Columbia, Canada]
