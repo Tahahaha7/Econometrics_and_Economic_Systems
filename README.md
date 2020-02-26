@@ -6,3 +6,6 @@
 - **Assignment II:** U.S. gasoline consumption
 - **Assignment III:** The German healthcare dataset & The Redbook survey
 - **Final Project:** The impact of the Carbon Tax on economic performance [Case of British Columbia, Canada]
+\
+\
+![Github](https://github.com/Tahahaha7/Econometrics_and_Economic_Systems/blob/master/Bachelors%20degree.png)
